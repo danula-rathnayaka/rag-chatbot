@@ -1,0 +1,21 @@
+question,answer
+What is Agentic AI?,"Agentic AI refers to AI systems that can autonomously plan, reason, and take actions toward goals with minimal human input."
+How does LangChain support Agentic AI development?,"LangChain provides tools to build LLM applications that can reason, remember, and interact with their environment, which are core capabilities for Agentic AI."
+What is an agent in LangChain?,An agent is a component that uses LLMs to make decisions and choose which tools or actions to execute dynamically.
+How do LangChain agents differ from chains?,"Chains follow a fixed sequence of steps, while agents can decide dynamically what to do next based on the input and context."
+What are tools in LangChain agents?,"Tools are functions or APIs that an agent can use to perform actions like web search, database queries, or math operations."
+What is the ReAct agent in LangChain?,"The ReAct agent uses reasoning and action to decide what actions to take, based on feedback loops between reasoning and actions."
+What is LangChain's memory module?,"Memory in LangChain allows agents to remember previous interactions, enabling them to take context into account for future decisions."
+Can LangChain agents work without memory?,"Yes, agents can operate without memory, but adding memory helps agents perform better by remembering past events or actions."
+How does LangChain handle external tools?,LangChain allows agents to use external tools by providing a wrapper around them to enable agents to interact with APIs or databases easily.
+How do I integrate an LLM with LangChain?,"You can integrate an LLM with LangChain by configuring it with the appropriate language model interface, such as OpenAI’s GPT models or Hugging Face models."
+What is a 'tool call' in LangChain?,A tool call refers to the process where an agent invokes an external function or API to complete a task or gather information.
+Can I train LangChain agents on custom data?,"Yes, you can train LangChain agents on custom data by providing the appropriate dataset and configuring the model accordingly."
+What does 'chain of thought' mean in the context of LangChain?,Chain of thought refers to the process where LangChain agents break down complex tasks into smaller steps to reason and act more effectively.
+How can LangChain agents perform web scraping?,LangChain agents can perform web scraping by using tools that interact with the web or by integrating with web scraping libraries like BeautifulSoup.
+Is LangChain only for Python developers?,"While LangChain is primarily designed for Python, it can be extended and integrated into other environments with some customization."
+How do I deploy a LangChain agent?,"You can deploy a LangChain agent by integrating it into a web service, a chatbot platform, or as a standalone application using frameworks like FastAPI."
+What is the LangChain Hub?,"The LangChain Hub is a repository where developers can share and discover reusable LangChain components, agents, and tools."
+Can LangChain agents be used for chatbots?,"Yes, LangChain agents are often used to create advanced chatbots that can reason, handle complex queries, and execute actions dynamically."
+How do LangChain agents manage conversations?,LangChain agents can manage conversations by storing context and using tools like memory to keep track of ongoing dialogues.
+What is the difference between a LangChain agent and a traditional chatbot?,"LangChain agents are more flexible and intelligent, capable of reasoning, using external tools, and adapting dynamically to different tasks, unlike traditional chatbots which are usually rule-based."
