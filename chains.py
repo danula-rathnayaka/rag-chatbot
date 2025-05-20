@@ -32,4 +32,8 @@ class Chain:
 
         # Execute the chain with the user's input
         res = chain_extract.invoke(input={"question": question, "faqs": faqs_text})
+
+        if "don't know" in res.lower() or "not in the faqs" in res.lower():
+            res = "I couldn't find a relevant answer. Please rephrase your question."
+
         return res

@@ -1,7 +1,7 @@
 import streamlit as st
 from FAQ_DB import FAQ_DB
 from chains import Chain
-from qa_logger import save_qa_to_csv
+from qa_logger import save_qa_to_txt
 
 
 # Function to create the Streamlit app
@@ -31,7 +31,7 @@ def create_streamlit_app():
             faqs_list = faq_db.query_faqs(question)
             answer = chain.answer_question(question, faqs_list)
 
-            save_qa_to_csv(question, answer)
+            save_qa_to_txt(question, answer)
 
             st.subheader("Chatbot Answer:")
             st.write(answer)
