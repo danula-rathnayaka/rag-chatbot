@@ -37,11 +37,11 @@ def create_streamlit_app():
             st.write(answer)
 
             st.subheader("Top Retrieved FAQs:")
-            for idx, faq in enumerate(faqs_list, 1):
-                if isinstance(faq, dict):
-                    st.markdown(f"**Q{idx}:** {faq['question']}  \n**A:** {faq['answer']}")
-                else:
-                    st.markdown(f"- {faq}")
+
+            for idx, item in enumerate(faqs_list[0], 1):
+                st.markdown(f"Q: {item['question']}")
+                st.markdown(f"       A: {item['answer']}")
+                st.markdown("---")
 
         except Exception as e:
             st.error(f"An error occurred: {e}")
