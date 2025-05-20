@@ -4,14 +4,37 @@ from typing import List
 
 
 class Chain:
+    """
+    A simple question-answering chain using an LLM and a list of FAQs.
+
+    The chain is designed to answer a user-provided question using a predefined
+    list of frequently asked questions (FAQs). If the answer cannot be inferred
+    from the FAQs, the system responds appropriately.
+    """
+
     def __init__(self):
-        # Initialize the LLM with the specified model and temperature
+        """
+        Initializes the Chain with a specific LLM model (`llama3.2:latest`)
+        and sets the temperature to 0 for deterministic output.
+        """
         self.llm = OllamaLLM(
             model="llama3.2:latest",
             temperature=0
         )
 
     def answer_question(self, question: str, faqs: List[str]):
+        """
+        Answers a given question using a list of FAQs.
+
+        Args:
+            question (str): The user's question.
+            faqs (List[str]): A list of frequently asked questions (and answers).
+
+        Returns:
+            str: The AI-generated answer based on the FAQs. If no relevant
+                 answer is found, a fallback message is returned.
+        """
+
         # Format the FAQs as a bullet-pointed string
         faqs_text = "\n".join(f"- {faq}" for faq in faqs)
 
