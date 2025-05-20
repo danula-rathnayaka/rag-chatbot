@@ -1,6 +1,7 @@
 import streamlit as st
 from FAQ_DB import FAQ_DB
 from chains import Chain
+from qa_logger import save_qa_to_csv
 
 
 # Function to create the Streamlit app
@@ -20,7 +21,7 @@ def create_streamlit_app():
     chain = st.session_state.chain
 
     # User input for question
-    question = st.text_input("Ask a question:", value="What is LangChain?")
+    question = st.text_input("Ask a question:", value="What is Agentic AI?")
     submit_button = st.button("Get Answer")
 
     # Process input when submit button is clicked
@@ -29,6 +30,8 @@ def create_streamlit_app():
             # Retrieve relevant FAQs and generate an answer
             faqs_list = faq_db.query_faqs(question)
             answer = chain.answer_question(question, faqs_list)
+
+            save_qa_to_csv(question, answer)
 
             st.subheader("Chatbot Answer:")
             st.write(answer)
